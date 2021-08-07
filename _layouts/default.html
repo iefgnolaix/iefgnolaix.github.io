@@ -6,25 +6,10 @@
   <!-- Enable responsive viewport -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-  <!-- <title>
-    {% if page.title %}
-      {{ page.title | escape }}
-    {% else %}
-      {{ site.title | escape }}
-    {% endif %}
-  </title> -->
-  <title>
-    {% if page.title %}
-      {{ page.title }} | 
-    {% endif %}  
-    
-    {{ site.title }}
-  </title>
-  {% if page.description %}
-    <meta name="description" content="{{ page.description }}">
-  {% endif %}
-  <meta name="author" content="{{ site.author.name }}">
+
+  <title>YAPW | Yet Another Personal Website</title>
+  <meta name="description" content="A website you've never seen before.">
+  <meta name="author" content="夏龙飞">
 
   <!-- Bootstrap styles -->
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
@@ -41,57 +26,17 @@
   <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/images/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseurl }}/images/apple-touch-icon-114x114.png">
 
-  <!-- atom & rss feed -->
-  <link href="{{ site.baseurl }}{{ site.JB.atom_path | prepend: site.baseurl }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
-  <link href="{{ site.baseurl }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
-
   <!-- Font Awesome 图标库 -->
   <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
   <!-- 换用国内CDN -->
   <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.css">
-
-  <!-- 自动生成目录 -->
-  <!-- This css contains the default style for TOC -->
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/toc.css" />
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
-  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="{{ site.baseurl }}/js/jquery.toc.js"></script>
-  <!-- <style type="text/css">
-    #renderIn {
-      margin-left: 3em;
-    }
-  </style> -->
-  <script type="text/javascript">
-    $(function() {
-      $("#content").toc({
-        showAlways:true,
-        renderIn: "#renderIn",
-        contentsText: "本文目录",
-        hideText: "折叠",
-        showText: "展开",
-      });
-    });
-  </script>
-  <!-- 自动生成目录 -->
-
-  <!-- sidebar 智能侧边栏 -->
-  <script type="text/javascript" src="{{ site.baseurl }}/js/theia-sticky-sidebar.js"></script>
-  <script type="text/javascript">
-    jQuery(document).ready(function() {
-      jQuery('.sidebar').theiaStickySidebar({
-        // Settings
-        additionalMarginTop: 80
-      });
-    });
-  </script>
-  <!-- sidebar 智能侧边栏 -->
 
   <!-- 网站数据统计脚本 -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KH5F33460C"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-KH5F33460C');
@@ -102,57 +47,32 @@
 <body class="d-flex flex-column h-100">
 
   <!-- 导航栏 -->
-  <div class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <div class="container d-flex justify-content-between">
-      
-      <!-- <a class="navbar-brand" href="{{ site.baseurl }}/index" style="border-style: solid; border-radius: 5px; width: 46px; text-align: center;">A</a> -->
-      <a class="navbar-brand" href="{{ site.baseurl }}/index">YA</a>
-      
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div id="navbarsExampleDefault" class="collapse navbar-collapse">
-        <ul class="navbar-nav mr-auto">
-          <!-- <li class="nav-item active">
-          <a class="nav-link" href="{{ site.baseurl }}/index.html">Home<span class="sr-only">(current)</span></a>
-        </li> -->
-          <!-- <li class="nav-item">
-            <a class="nav-link {% if page.title == 'Home' %}active{% endif %}" href="{{ site.baseurl }}/index">首页</a>
-          </li>   -->
-          <li class="nav-item">
-            <a class="nav-link {% if page.layout == 'post' or page.layout == '8-4' %}active{% endif %}" href="{{ site.baseurl }}/blog">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {% if page.title == 'bookmark' %}active{% endif %}" href="{{ site.baseurl }}/bookmark">Bookmark</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {% if page.title == 'CV' %}active{% endif %}" href="{{ site.baseurl }}/cv">CV</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {% if page.title == 'About' %}active{% endif %}" href="{{ site.baseurl }}/about">About</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link disabled" href="">Cover Page</a>
-          </li> -->
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search (unavailable)"
-            aria-label="Search">
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">搜索</button>
-        </form>
-      </div>
-      
-    </div>
-  </div>
+  <header class="site-header sticky-top py-1">
+    <nav class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2" href="/home" aria-label="Product">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img"
+          viewBox="0 0 24 24">
+          <title>Product</title>
+          <circle cx="12" cy="12" r="10" />
+          <path
+            d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+        </svg>
+      </a>
+      <a class="py-2 d-none d-md-inline-block" href="#">Tour</a>
+      <a class="py-2 d-none d-md-inline-block" href="#">Product</a>
+      <a class="py-2 d-none d-md-inline-block" href="#">Features</a>
+      <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>
+      <a class="py-2 d-none d-md-inline-block" href="#">Support</a>
+      <a class="py-2 d-none d-md-inline-block" href="#">Pricing</a>
+      <a class="py-2 d-none d-md-inline-block" href="#">Cart</a>
+    </nav>
+  </header>
 
   <!-- 主容器 -->
-  <div class="container">
-    
-    {{ content }}
+  <div class="container" style="padding-top: 15px;">
 
-    <!-- 调试信息 -->
-    {% include made-by-myself/debug-info %}
+    {{ content }}
 
   </div>
 
@@ -161,25 +81,28 @@
     <div class="container">
       <p>
         <!-- Map Widget provided by ClustrMaps.com -->
-        <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=IwC9fpnRbvTHZdspX1HWXkCwHCWI90zG4UCVL4SQ1X4'></script>
+        <script type='text/javascript' id='clustrmaps'
+          src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=IwC9fpnRbvTHZdspX1HWXkCwHCWI90zG4UCVL4SQ1X4'></script>
       </p>
-      <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a> and <a href="http://getbootstrap.com" target="_blank">Bootstrap</a></p>
+      <p>&copy; 2021 夏龙飞 with help from <a href="http://jekyllbootstrap.com" target="_blank"
+          title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a> and <a href="http://getbootstrap.com"
+          target="_blank">Bootstrap</a></p>
       <!-- <p><a href="http://www.beian.miit.gov.cn/" target="_blank" class="text">苏ICP备19021018号<br/></a></p> -->
     </div>
   </div>
 
 
-  
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
-  <!-- 换用国内CDN -->
-  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-  <!-- <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script> -->
-  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <!-- 换用国内CDN -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <!-- <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script> -->
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>

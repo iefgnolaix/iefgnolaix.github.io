@@ -8,13 +8,13 @@
 
 <script type="text/javascript">
   var gitalk = new Gitalk({
-    clientID: "{{ site.JB.comments.gitalk.clientID}}",
-    clientSecret: "{{ site.JB.comments.gitalk.clientSecret}}",
-    repo: "{{ site.JB.comments.gitalk.repo}}",
-    owner: "{{ site.JB.comments.gitalk.owner}}",
+    clientID: "a86c2379ac1cc4fbc303",
+    clientSecret: "0e301c07a8734a5a78865d5e2b8c0b312e0d8073",
+    repo: "iefgnolaix.github.io",
+    owner: "iefgnolaix",
     admin: ["AaronszXia"],
-    id: {{ site.JB.comments.gitalk.id}},
-    distractionFreeMode: {{ site.JB.comments.gitalk.distractionFreeMode}}
+    id: md5(location.pathname),
+    distractionFreeMode: false
   })
 
   gitalk.render("gitalk-container")

@@ -1,0 +1,6 @@
+Id,Name,Image,Description,Address,Icon
+bootstrap,Bootstrap,bootstrap.png,"The most popular HTML, CSS, and JS library in the world.",getbootstrap.com,bootstrap-icon.png
+adlp,Ant Design Landing Page,adlp.png,Ant Design Landing 平台拥有丰富的各类首页模板，下载模板代码包，即可快速使用，也可使用首页编辑器，快速搭建一个属于你的专属首页。,landing.ant.design,adlp-icon.png
+d2l,《动手学深度学习》(PyTorch版),d2l.png,本项目将《动手学深度学习》 原书中MXNet代码实现改为PyTorch实现。原书作者：阿斯顿·张、李沐、扎卡里 C. 立顿、亚历山大 J. 斯莫拉以及其他社区贡献者，GitHub地址：https://github.com/d2l-ai/d2l-zh,tangshusen.me/Dive-into-DL-PyTorch,
+yapw,夏龙飞的个人网站,,Yet another personal website you've nerver seen before.,xiafanglongfei.github.io,yapw.ico
+overleaf,"Overleaf, 在线LaTeX编辑器",overleaf.png,一个简洁的在线 LaTeX 编辑器。无需安装，实时共享，版本控制，数百免费模板……,cn.overleaf.com,overleaf.ico
