@@ -8,7 +8,7 @@ I am a student of <abbr title="Nanjing University of Posts and Telecommunication
 
 # 你好，我叫**夏龙飞**!
 
-目前是[<s>北京交通大学</s>北下关铁道职业技术学院](http://www.bjtu.edu.cn "北京交通大学")计算机与信息技术学院在读研究生，不出意外的话，我将于2022年6月取得我的硕士学位。
+目前是[<s>北京交通大学</s>北下关铁道职业技术学院](http://www.bjtu.edu.cn "北京交通大学")计算机与信息技术学院在读研究生，不出意外的话，将于2022年6月取得我的硕士学位。
 
 欢迎访问我的个人网站！这个网站采用 Jekyll 技术生成静态网页文件，托管于 GitHub Pages 上，由 Bootstrap 提供网页响应式布局。网站所使用的图标来源于 [Font Awesome](https://fontawesome.com) 在线图标库。
 
@@ -35,7 +35,7 @@ I am a student of <abbr title="Nanjing University of Posts and Telecommunication
 
 你可以通过这些方式了解和联系我：
 
-- [<i class="far fa-envelope"></i> xiafanglongfei@bjtu.edu.cn](mailto:xiafanglongfei@bjtu.edu.cn "xiafanglongfei@bjtu.edu.cn")
+- [<i class="far fa-envelope"></i> xiafanglongfei@qq.com](mailto:xiafanglongfei@qq.com "xiafanglongfei@qq.com")
 - [<i class="fab fa-github"></i> @xiafanglongfei](https://github.com/xiafanglongfei "@xiafanglongfei")
 - [<i class="fab fa-weibo"></i> @华之腾同学](https://weibo.com/u/2185032634 "@华之腾同学")
 
